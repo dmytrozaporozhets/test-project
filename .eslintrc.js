@@ -8,13 +8,15 @@ module.exports = {
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
+    "plugin:@typescript-eslint/recommended",
   ],
   overrides: [],
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["react", "prettier"],
+  parser: "@typescript-eslint/parser",
+  plugins: ["react", "prettier", "@typescript-eslint"],
   rules: {
     "prettier/prettier": "error",
   },
