@@ -3,12 +3,14 @@ import { Button, StyleSheet, Text, View } from "react-native";
 import { Routes } from "../navigation/Routes";
 import { useNavigation } from "@react-navigation/native";
 import { RootStackParamList } from "../navigation/ParamsList";
+import { useTranslation } from "react-i18next";
 
 const SignIn = memo(() => {
   const { navigate } = useNavigation<RootStackParamList>();
+  const { t } = useTranslation("auth");
   return (
     <View style={styles.container}>
-      <Text>SignIn screen</Text>
+      <Text>{t("sigIn")}</Text>
       <Button title="Go to Home screen" onPress={() => navigate(Routes.HOME)} />
     </View>
   );
