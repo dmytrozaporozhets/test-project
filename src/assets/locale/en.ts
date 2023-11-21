@@ -1,4 +1,4 @@
-export default {
+const en = {
   auth: {
     forgotPass: "Forgot password?",
     sigIn: "Sign in",
@@ -8,3 +8,5 @@ export default {
     haveAccount: "Already have an account?",
   },
 };
+
+export default en;

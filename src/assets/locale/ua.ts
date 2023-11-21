@@ -1,4 +1,4 @@
-export default {
+const ua = {
   auth: {
     forgotPass: "Забули пароль?",
     sigIn: "Увійти",
@@ -8,3 +8,5 @@ export default {
     haveAccount: "Вже є аккаунт?",
   },
 };
+
+export default ua;

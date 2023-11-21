@@ -3,6 +3,7 @@ import Home from "../screens/Home";
 import SignIn from "../screens/SignIn";
 import { createStackNavigator } from "@react-navigation/stack";
 import { Routes } from "./Routes";
+import Settings from "../screens/Settings";
 
 const RootStack = createStackNavigator();
 
@@ -15,6 +16,7 @@ export const Navigation = () => {
       >
         <RootStack.Screen name="SIGN_IN" component={SignIn} />
         <RootStack.Screen name="HOME" component={Home} />
+        <RootStack.Screen name="SETTINGS" component={Settings} />
       </RootStack.Navigator>
     </NavigationContainer>
   );
