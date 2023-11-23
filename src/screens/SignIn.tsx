@@ -3,11 +3,11 @@ import { Button, StyleSheet, Text, View } from "react-native";
 import { Routes } from "../navigation/Routes";
 import { useNavigation } from "@react-navigation/native";
 import { RootStackParamList } from "../navigation/ParamsList";
-import { useTranslation } from "react-i18next";
+import { TranslationProps, useTranslation } from "react-i18next";
 
 const SignIn = memo(() => {
   const { navigate } = useNavigation<RootStackParamList>();
-  const { t } = useTranslation("auth");
+  const { t }: TranslationProps = useTranslation("auth");
   return (
     <View style={styles.container}>
       <Text>{t("sigIn")}</Text>
@@ -24,7 +24,5 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 });
-
-SignIn.displayName = Routes.SIGN_IN;
 
 export default SignIn;

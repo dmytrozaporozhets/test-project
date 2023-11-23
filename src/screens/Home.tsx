@@ -30,6 +30,4 @@ const styles = StyleSheet.create({
   },
 });
 
-Home.displayName = Routes.HOME;
-
 export default Home;
