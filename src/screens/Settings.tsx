@@ -1,6 +1,5 @@
 import { memo } from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
-import { Routes } from "../navigation/Routes";
 import { useNavigation } from "@react-navigation/native";
 import { RootStackParamList } from "../navigation/ParamsList";
 import { useTranslation } from "react-i18next";
@@ -49,7 +48,5 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 });
-
-Settings.displayName = Routes.SETTINGS;
 
 export default Settings;

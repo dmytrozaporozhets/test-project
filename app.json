@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "3eaaeaa7-f755-4fbf-aed8-61278c01a98f"
+      }
+    },
+    "owner": "dmytrozaporozhets"
   }
 }
