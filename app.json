@@ -15,13 +15,15 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.dmytrozaporozhets.testproject"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.dmytrozaporozhets.testproject"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -31,6 +33,12 @@
         "projectId": "3eaaeaa7-f755-4fbf-aed8-61278c01a98f"
       }
     },
-    "owner": "dmytrozaporozhets"
+    "owner": "dmytrozaporozhets",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/3eaaeaa7-f755-4fbf-aed8-61278c01a98f"
+    }
   }
 }
