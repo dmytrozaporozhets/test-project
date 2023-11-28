@@ -4,8 +4,9 @@ import { Routes } from "../navigation/Routes";
 import { useNavigation } from "@react-navigation/native";
 import { RootStackParamList } from "../navigation/ParamsList";
 import { TranslationProps, useTranslation } from "react-i18next";
-import { Button } from "../components";
+import { Button, IconButton } from "../components";
 import { contentSize } from "../contants/enum";
+import { icons } from "../contants/icons";
 
 const SignIn = memo(() => {
   const { navigate } = useNavigation<RootStackParamList>();
@@ -13,6 +14,7 @@ const SignIn = memo(() => {
   return (
     <View style={styles.container}>
       <Text>{t("sigIn")}</Text>
+      <IconButton icon={icons.userSolid} iconStyle={{ marginVertical: 10 }} />
       <Button
         title="Go to Home"
         onPress={() => navigate(Routes.HOME)}
