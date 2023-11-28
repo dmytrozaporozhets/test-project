@@ -1,9 +1,11 @@
 import { memo } from "react";
-import { Button, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import { Routes } from "../navigation/Routes";
 import { useNavigation } from "@react-navigation/native";
 import { RootStackParamList } from "../navigation/ParamsList";
 import { TranslationProps, useTranslation } from "react-i18next";
+import { Button } from "../components";
+import { contentSize } from "../contants/enum";
 
 const SignIn = memo(() => {
   const { navigate } = useNavigation<RootStackParamList>();
@@ -11,7 +13,12 @@ const SignIn = memo(() => {
   return (
     <View style={styles.container}>
       <Text>{t("sigIn")}</Text>
-      <Button title="Go to Home screen" onPress={() => navigate(Routes.HOME)} />
+      <Button
+        title="Go to Home"
+        onPress={() => navigate(Routes.HOME)}
+        size={contentSize.XS}
+        style={{ marginTop: 10 }}
+      />
     </View>
   );
 });
