@@ -21,3 +21,7 @@ export const schemaType = {
   OUTLINE_DARK: "outline-dark",
   OUTLINE_WHITE: "outline-white",
 };
+
+export const ActionButtonType = {
+  CLOSE: "close",
+};

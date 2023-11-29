@@ -3,8 +3,8 @@ import { memo } from "react";
 import {
   HandlerButtonSize,
   HandlerButtonTheme,
-} from "../../theme/helpers/button";
-import { TouchableOpacity, Text, ViewProps } from "react-native";
+} from "../../theme/helpers/HandlerButtonTheme";
+import { TouchableOpacity, Text, ViewProps, TextProps } from "react-native";
 import {
   ButtonSize,
   ButtonStyleType,
@@ -28,7 +28,7 @@ const ButtonStyle: ButtonStyleType = {
     borderRadius: 10,
   },
   text: {
-    fontWeight: 700,
+    fontWeight: "700",
     textAlign: "center",
   },
 };
@@ -58,7 +58,13 @@ export const Button = memo(
         onPress={onPress}
         disabled={disabled}
       >
-        <Text style={[textStyle, { color: titleColor }]}>{title}</Text>
+        <Text
+          style={
+            [ButtonStyle.text, textStyle, { color: titleColor }] as TextProps
+          }
+        >
+          {title}
+        </Text>
       </TouchableOpacity>
     );
   },

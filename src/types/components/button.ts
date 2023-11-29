@@ -16,7 +16,7 @@ export type ButtonStyleType = {
     flexDirection?: string;
     justifyContent?: string;
   };
-  text: { textAlign?: string; fontWeight?: number };
+  text: { textAlign?: string; fontWeight?: string };
 };
 
 export type SizeType = {

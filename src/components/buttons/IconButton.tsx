@@ -8,12 +8,10 @@ const IconButtonStyle = {
   wrapper: { alignItems: "center", justifyContent: "center" },
 };
 
-export const IconButton = memo(
-  ({ icon, color, iconStyle, ...props }: IconProp) => {
-    return (
-      <TouchableOpacity style={IconButtonStyle.wrapper} {...props}>
-        <FontAwesomeIcon icon={icon} color={color} style={iconStyle} />
-      </TouchableOpacity>
-    );
-  },
-);
+export const IconButton = memo(({ icon, color, size, ...props }: IconProp) => {
+  return (
+    <TouchableOpacity style={IconButtonStyle.wrapper} {...props}>
+      <FontAwesomeIcon icon={icon} color={color} size={size} />
+    </TouchableOpacity>
+  );
+});
