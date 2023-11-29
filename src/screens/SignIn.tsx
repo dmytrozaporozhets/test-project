@@ -20,16 +20,16 @@ import { icons } from "../contants/icons";
 const SignInStyle = {
   logo: { marginVertical: 60, alignSelf: "center" },
   section: {
-    flexDirection: "row",
-    justifyContent: "center",
+    alignItems: "center",
     marginVertical: 20,
   },
   text: {
     fontSize: 16,
     fontWeight: "700",
     color: Colors.secondary[500],
+    flex: 1,
   },
-  noAcc: { fontSize: 16, marginRight: 5 },
+  noAcc: { fontSize: 16, marginRight: 5, textAlign: "center" },
 };
 
 const SignIn = memo(() => {
@@ -73,7 +73,7 @@ const SignIn = memo(() => {
           />
           <View>
             <FormInput
-              label="Email"
+              label={t("email")}
               name="email"
               control={control}
               rules={validationSchema.email}
@@ -81,7 +81,7 @@ const SignIn = memo(() => {
               type={schemaType.LIGHT}
             />
             <FormInput
-              label="Password"
+              label={t("password")}
               name="password"
               control={control}
               rules={validationSchema.password}
@@ -102,9 +102,11 @@ const SignIn = memo(() => {
             onSignInGitHub={onSignInGitHub}
           />
           <View style={SignInStyle.section}>
-            <Text style={SignInStyle.noAcc}>{t("auth:noAccount")}</Text>
-            <Text style={SignInStyle.text} onPress={onSignUp}>
-              {t("auth:sigUp")}
+            <Text style={SignInStyle.noAcc}>
+              {t("auth:noAccount")}{" "}
+              <Text style={SignInStyle.text} onPress={onSignUp}>
+                {t("auth:sigUp")}
+              </Text>
             </Text>
           </View>
         </View>

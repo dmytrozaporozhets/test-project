@@ -6,6 +6,8 @@ const en = {
     noAccount: "Don't have an account?",
     sigUp: "Sign up",
     haveAccount: "Already have an account?",
+    email: "Email",
+    password: "Password",
   },
 };
 
