@@ -20,6 +20,7 @@ module.exports = {
   rules: {
     "prettier/prettier": "error",
     "react/display-name": "off",
+    "@typescript-eslint/no-explicit-any": "off",
   },
   settings: {
     react: {
