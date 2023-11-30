@@ -4,7 +4,7 @@ import { TranslationProps, useTranslation } from "react-i18next";
 import { Colors } from "../../theme/Colors";
 import { IconButton } from "../buttons/IconButton";
 import { Text, View } from "react-native";
-import { icons } from "../../contants/icons";
+import { icons } from "../../assets/icons";
 
 interface SocialAuthorizationProps {
   onSignInGoogle?: () => void;

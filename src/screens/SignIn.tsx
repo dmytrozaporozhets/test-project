@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { KeyboardAvoidingView, StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { RootStackParamList } from "../navigation/ParamsList";
 import { TranslationProps, useTranslation } from "react-i18next";
@@ -9,13 +9,14 @@ import {
   FormInput,
   IconButton,
   SocialAuthorization,
+  KeyboardView,
 } from "../components";
 import { schemaType } from "../contants/enum";
 import { useForm } from "react-hook-form";
 import validationSchema from "../utils/validation/rules";
 import { Routes } from "../navigation/Routes";
 import { Colors } from "../theme/Colors";
-import { icons } from "../contants/icons";
+import { icons } from "../assets/icons";
 
 const SignInStyle = {
   logo: { marginVertical: 60, alignSelf: "center" },
@@ -50,7 +51,7 @@ const SignIn = memo(() => {
   });
 
   const signIn = () => {
-    navigate(Routes.HOME);
+    navigate(Routes.BOTTOM_TAB_BAR);
     reset();
   };
 
@@ -62,10 +63,13 @@ const SignIn = memo(() => {
 
   return (
     <ScreenView>
-      <KeyboardAvoidingView style={{ flex: 1 }}>
-        <View style={styles.container}>
+      <KeyboardView>
+        <ScrollView
+          scrollEnabled={false}
+          contentContainerStyle={styles.container}
+        >
           <IconButton
-            icon={icons.userSolid}
+            icon={icons.user}
             color={Colors.primary[500]}
             size={60}
             style={SignInStyle.logo}
@@ -109,8 +113,8 @@ const SignIn = memo(() => {
               </Text>
             </Text>
           </View>
-        </View>
-      </KeyboardAvoidingView>
+        </ScrollView>
+      </KeyboardView>
     </ScreenView>
   );
 });

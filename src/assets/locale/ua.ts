@@ -9,6 +9,10 @@ const ua = {
     email: "Електронна пошта",
     password: "Пароль",
   },
+  tabs: {
+    home: "Домашня",
+    profile: "Профіль",
+  },
 };
 
 export default ua;

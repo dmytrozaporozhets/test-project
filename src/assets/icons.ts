@@ -1,4 +1,9 @@
-import { faUser, faEye } from "@fortawesome/free-solid-svg-icons";
+import {
+  faUser,
+  faEye,
+  faHome,
+  faGear,
+} from "@fortawesome/free-solid-svg-icons";
 import { faXmark, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
@@ -8,12 +13,14 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 export const icons = {
-  userSolid: faUser,
+  user: faUser,
   close: faXmark,
-  eyeSolid: faEye,
-  eyeSlashSolid: faEyeSlash,
+  eye: faEye,
+  eyeSlash: faEyeSlash,
   gitHub: faGithub,
   google: faGoogle,
   facebook: faFacebook,
   twitter: faTwitter,
+  home: faHome,
+  gear: faGear,
 };

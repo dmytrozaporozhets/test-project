@@ -2,7 +2,7 @@ import { memo, useCallback } from "react";
 import { ActionButtonType } from "../../contants/enum";
 import { IconButton } from "../buttons/IconButton";
 import { View } from "react-native";
-import { icons } from "../../contants/icons";
+import { icons } from "../../assets/icons";
 
 type HandlerIconButtonType = "close";
 
@@ -21,7 +21,7 @@ const HandlerIconButtonStyle = {
   },
 };
 
-export const HandlerIconButton = memo((props: HandlerIconButtonProps) => {
+export const InputButtonHandler = memo((props: HandlerIconButtonProps) => {
   const { value, type, onAction, editable, iconColor, ...restProps } = props;
 
   const renderContent = useCallback(() => {
