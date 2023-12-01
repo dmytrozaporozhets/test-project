@@ -9,6 +9,10 @@ const en = {
     email: "Email",
     password: "Password",
   },
+  tabs: {
+    home: "Home",
+    profile: "Profile",
+  },
 };
 
 export default en;

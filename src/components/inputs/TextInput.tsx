@@ -16,11 +16,11 @@ import {
 
 import { InputType } from "../../theme/helpers/HandlerInputTheme";
 import { IconButton } from "../buttons/IconButton";
-import { HandlerIconButton } from "../handlers/HandlerIconButton";
+import { InputButtonHandler } from "../handlers/InputButtonHandler";
 import { ErrorMessage } from "../elements/ErrorMessage";
 import { Colors } from "../../theme/Colors";
 import { Label } from "../elements/Label";
-import { icons } from "../../contants/icons";
+import { icons } from "../../assets/icons";
 import { HandlerInputTheme } from "../../theme/helpers/HandlerInputTheme";
 
 export type TextInputProps = RNTextInputProps & {
@@ -163,14 +163,14 @@ export const TextInput = forwardRef<RNTextInput, TextInputProps>(
             />
             {securedEntry && (
               <IconButton
-                icon={isPasswordVisible ? icons.eyeSolid : icons.eyeSlashSolid}
+                icon={isPasswordVisible ? icons.eye : icons.eyeSlash}
                 onPress={togglePasswordVisibility}
                 iconColor={iconColor}
                 style={{ marginRight: 10 }}
               />
             )}
             {onRightPress && (
-              <HandlerIconButton
+              <InputButtonHandler
                 value={value}
                 editable={editable}
                 onAction={onRightPress}
